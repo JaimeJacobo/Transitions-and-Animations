@@ -1,0 +1,51 @@
+
+#box, #second-box {
+  width: 300px;
+  height: 300px;
+  background-color: coral;
+  margin: 10px;
+}
+
+/* Hover es la accion de pasar el ratón por encima de un elemento sin hacer click en él. Mediante :hover, podemos cambiar temporalemnte las propiedades del emlemento que queremos apuntar */
+#box:hover {
+  /* background-color: coral;
+  border: 5px solid black; */
+  transform: rotate(20deg);
+  width: 500px;
+  background-color: blueviolet;
+  transition-property: background-color, width;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1s;
+
+  /* transition: background-color 1s ease-in-out 1s, width 1s ease-in-out 1s; */
+}
+
+#second-box{
+  animation-name: change_to_purple;
+  animation-duration: 2s;
+  /* animation-delay: 3s; */
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes move_left {
+  0% {
+    margin-left: 0;
+  }
+  100%{
+    margin-left: 200px;
+  }
+}
+
+@keyframes change_to_purple {
+
+  0% {
+    background-color: coral;
+  }
+
+  100%{
+    background-color: purple
+  }
+}
+
